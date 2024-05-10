@@ -86,8 +86,6 @@ public class PatientRegistrationForm extends JFrame {
                     age.setText(model.getValueAt(selectedRow, 3).toString());
                     addressField.setText(model.getValueAt(selectedRow, 4).toString());
                     contactField.setText(model.getValueAt(selectedRow, 5).toString());
-
-                    
                 }
             }
         });
@@ -182,8 +180,6 @@ Connection con = DriverManager.getConnection("jdbc:mysql://localhost/java_projec
                 } catch (SQLException ex) {
                     java.util.logging.Logger.getLogger(DoctorForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
                 }
-   
-        
             }
         });
         
