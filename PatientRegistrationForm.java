@@ -9,8 +9,6 @@ import java.util.logging.Logger;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 import javax.swing.table.DefaultTableModel;
-
-
 public class PatientRegistrationForm extends JFrame {
  JLabel ageLabel = new JLabel("Age:");
     JTextField nameField; 
@@ -45,8 +43,6 @@ public class PatientRegistrationForm extends JFrame {
         JLabel nameLabel = new JLabel("Name:");
         nameField = new JTextField();
         JLabel genderLabel = new JLabel("Gender:");
-      
-       
         age= new JTextField();
         
         JLabel addressLabel = new JLabel("Address:");
