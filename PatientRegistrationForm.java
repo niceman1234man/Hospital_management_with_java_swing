@@ -9,8 +9,6 @@ import java.util.logging.Logger;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 import javax.swing.table.DefaultTableModel;
-
-
 public class PatientRegistrationForm extends JFrame {
  JLabel ageLabel = new JLabel("Age:");
     JTextField nameField; 
@@ -46,8 +44,6 @@ public class PatientRegistrationForm extends JFrame {
         JLabel nameLabel = new JLabel("Name:");
         nameField = new JTextField();
         JLabel genderLabel = new JLabel("Gender:");
-      
-       
         age= new JTextField();
         
         JLabel addressLabel = new JLabel("Address:");
@@ -92,8 +88,6 @@ public class PatientRegistrationForm extends JFrame {
                     age.setText(model.getValueAt(selectedRow, 3).toString());
                     addressField.setText(model.getValueAt(selectedRow, 4).toString());
                     contactField.setText(model.getValueAt(selectedRow, 5).toString());
-
-                    
                 }
             }
         });
@@ -188,8 +182,6 @@ Connection con = DriverManager.getConnection("jdbc:mysql://localhost/java_projec
                 } catch (SQLException ex) {
                     java.util.logging.Logger.getLogger(DoctorForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
                 }
-   
-        
             }
         });
         
