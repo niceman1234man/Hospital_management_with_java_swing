@@ -28,6 +28,7 @@ public class PatientRegistrationForm extends JFrame {
     private JButton search = new JButton("SEARCH");
     private JPanel p=new JPanel();
     public PatientRegistrationForm() {
+       
         JLabel imageLabel = new JLabel();
         // Load the image from a file
         ImageIcon imageIcon = new ImageIcon("C://Users/Hirut Tarekegn/Desktop/javaproject1/download.jfif");
@@ -69,6 +70,7 @@ public class PatientRegistrationForm extends JFrame {
         formPanel.add(addressField);
         formPanel.add(contactLabel);
         formPanel.add(contactField);
+         autoID();
 
         JPanel buttonPanel = new JPanel(new FlowLayout(FlowLayout.RIGHT));
         Color c=new Color(250,0,255);
@@ -138,7 +140,7 @@ public class PatientRegistrationForm extends JFrame {
         
         clear.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                id.setText("");
+          id.setText("");
         nameField.setText("");
         gender.setSelectedIndex(0);
         age.setText("");
@@ -193,7 +195,10 @@ Connection con = DriverManager.getConnection("jdbc:mysql://localhost/java_projec
         
         delete.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                
+                 int result = JOptionPane.showConfirmDialog(null,"Sure? You want to delete?", "Swing Tester",
+               JOptionPane.YES_NO_OPTION,
+               JOptionPane.QUESTION_MESSAGE);
+            if(result == JOptionPane.YES_OPTION){
                  try {
 Class.forName("com.mysql.cj.jdbc.Driver");
                 
@@ -216,6 +221,8 @@ Connection con = DriverManager.getConnection("jdbc:mysql://localhost/java_projec
                 } catch (SQLException ex) {
                     java.util.logging.Logger.getLogger(DoctorForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
                 }
+                  }else {
+             JOptionPane.showMessageDialog(null,"you deleted nothing");           }
             
             }
         });
@@ -307,5 +314,42 @@ Statement stmt=(Statement)con.createStatement();
             ex.printStackTrace();
         }
     }
+    public void autoID() {
+    try {
+        // Load the MySQL JDBC driver
+        Class.forName("com.mysql.cj.jdbc.Driver");
+        
+        // Establish a connection to the database
+        Connection con = DriverManager.getConnection("jdbc:mysql://localhost/java_project", "root", "1234");
+        
+        // Prepare a statement to retrieve the maximum patientNo from the patient table
+        PreparedStatement pst = con.prepareStatement("SELECT MAX(patientNo) FROM patient");
+        
+        // Execute the query and retrieve the result set
+        ResultSet rs = pst.executeQuery();
+        rs.next();
+        
+        // Get the maximum patientNo value from the result set
+        String maxPatientNo = rs.getString("MAX(patientNo)");
+        
+        // Check if the maximum patientNo is null
+        if (maxPatientNo == null) {
+            // f it's null, set the ID to "ps001"
+            id.setText("ps001");
+        } else {
+            // Extract the numeric portion of the maximum patientNo and increment it
+            long n = Long.parseLong(maxPatientNo.substring(2));
+            n++;
+            
+            // Format the incremented number as a three-digit string and set the ID
+            id.setText("ps" + String.format("%03d", n));
+        }
+        
+    } catch (ClassNotFoundException ex) {
+        Logger.getLogger(PatientRegistrationForm.class.getName()).log(Level.SEVERE, null, ex);
+    } catch (SQLException ex) {
+        Logger.getLogger(PatientRegistrationForm.class.getName()).log(Level.SEVERE, null, ex);
+    }
+}
 
 }
