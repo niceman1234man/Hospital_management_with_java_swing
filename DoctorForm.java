@@ -142,10 +142,7 @@ formPanel.setBackground(Color.MAGENTA);
 //            }else {
 //               label.setText("None selected");
 //            }
-//         }
-                
-                
-                
+//         }  
                 
                 try {
                     Class.forName("com.mysql.cj.jdbc.Driver");
@@ -175,8 +172,6 @@ Connection con = DriverManager.getConnection("jdbc:mysql://localhost/java_projec
              JOptionPane.showMessageDialog(null,"you deleted nothing");           }
          }
         });
-        
-        
         
         searchButton.addActionListener(new ActionListener() {
             @Override
