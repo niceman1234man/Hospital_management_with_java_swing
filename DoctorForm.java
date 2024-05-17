@@ -41,10 +41,8 @@ public class DoctorForm extends JFrame {
         JLabel phonenoLabel = new JLabel("docNo");
         phoneno = new JTextField();
         phoneno.setPreferredSize(new Dimension(150, 25)); // Increase the size of the text field
-        
         JLabel genderLabel = new JLabel("Gender");
         genderComboBox = new JComboBox<>(new String[]{"Male", "Female"});
-        
         JLabel addressLabel = new JLabel("Address");
         addressArea = new JTextArea();
         addressArea.setPreferredSize(new Dimension(150, 100)); // Increase the size of the text area
@@ -79,25 +77,16 @@ formPanel.setBackground(Color.MAGENTA);
              departmentComboBox.setSelectedItem(null);
             }
         });
-        
-        
      updateButton.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                   
+            public void actionPerformed(ActionEvent e) {   
               try{
-    
           String value1= nameField.getText();
             String value2=phoneno.getText();
             String value3= genderComboBox.getSelectedItem().toString();
             String value4=addressArea.getText();
-             String value5=departmentComboBox.getSelectedItem().toString();
-           
-                     
+             String value5=departmentComboBox.getSelectedItem().toString();       
              //String value6=jTextField6.getText();               
          Class.forName("com.mysql.cj.jdbc.Driver");
-  
-
-
         Connection con = DriverManager.getConnection("jdbc:mysql://localhost/java_project", "root", "1234");
             String sql="update doctor set Name='"+value1+"', gender='"+value3+"',  address='"+value4+"', specialization='"+value5+"' where phone_no='"+value2+"'";
             PreparedStatement statement=con.prepareStatement(sql);
@@ -113,8 +102,6 @@ formPanel.setBackground(Color.MAGENTA);
                 } catch (ClassNotFoundException ex) {
                     Logger.getLogger(Prescription.class.getName()).log(Level.SEVERE, null, ex);
                 }
- 
-                
             }
         });
         saveButton = new JButton("Save");
@@ -140,7 +127,6 @@ formPanel.setBackground(Color.MAGENTA);
                 }
             }
         });
-        
         
         deleteButton.addActionListener(new ActionListener() {
             @Override
