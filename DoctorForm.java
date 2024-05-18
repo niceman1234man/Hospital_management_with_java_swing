@@ -9,7 +9,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
-
 public class DoctorForm extends JFrame {
     private JTextField nameField;
     private JTextField phoneno;
@@ -123,7 +122,6 @@ formPanel.setBackground(Color.MAGENTA);
                     genderComboBox.setSelectedItem(model.getValueAt(selectedRow, 2));
                     addressArea.setText(model.getValueAt(selectedRow, 3).toString());
                     departmentComboBox.setSelectedItem(model.getValueAt(selectedRow, 4));
-                    
                 }
             }
         });
