@@ -67,16 +67,11 @@ apoint.addActionListener(new ActionListener() {
             
              new View_appointment();   
              setVisible(false);
-                
             }
         });
-
-
 createChanel.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                
-                
-                    new Create_NewChannel();
+                     new Create_NewChannel();
                
                      setVisible(false);
             }
@@ -94,8 +89,6 @@ logOut.addActionListener(new ActionListener() {
               setVisible(false);
             }
         });
-
-     
           add(main);
         setSize(400, 350);
         setVisible(true);
