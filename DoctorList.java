@@ -5,8 +5,6 @@ import java.awt.event.*;
 import javax.swing.*;
 import java.sql.*;
 import javax.swing.table.DefaultTableModel;
-
-
 public class DoctorList extends JFrame {
     private JButton close = new JButton("Close");
     private JPanel pan = new JPanel();
