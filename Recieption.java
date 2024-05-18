@@ -5,25 +5,17 @@ import java.awt.*;
 import java.awt.event.*;
 import java.sql.*;
 import java.util.logging.*;
-
-
 public class Recieption extends JFrame {
-      
     private JPanel pan = new JPanel();
     private JButton patient = new JButton("PATIENT");
     private JButton createChanel = new JButton("Create Chanel");
-
     private JButton viewDoctor = new JButton("View Doctor");
     private JButton apoint = new JButton("view appintment");
      private JButton viewInventory = new JButton("viewInventory");
     private JButton logOut = new JButton("LOGOUT");
     private JPanel ta = new JPanel();
     private JPanel main = new JPanel();   
-
-    Recieption(){
-        
-
-        
+    Recieption(){   
         JLabel imageLabel = new JLabel();
         
         ImageIcon imageIcon = new ImageIcon("C://Users/Hirut Tarekegn/Desktop/javaproject1/images (3).jfif");
@@ -34,7 +26,6 @@ public class Recieption extends JFrame {
         main.setLayout(new GridLayout(1,2,5,6));
       ta.add(imageLabel);
         pan.setLayout(null);
-
         patient.setBounds(10, 45, 120, 25);
         createChanel.setBounds(10, 75, 120, 25);
 
@@ -68,11 +59,9 @@ viewInventory.addActionListener(new ActionListener() {
                new ViewInventory();
                
                 setVisible(false);
-
           }
         });
         
-
 apoint.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
             
@@ -90,7 +79,6 @@ createChanel.addActionListener(new ActionListener() {
                     new Create_NewChannel();
                
                      setVisible(false);
-
             }
         });
 viewDoctor.addActionListener(new ActionListener() {
