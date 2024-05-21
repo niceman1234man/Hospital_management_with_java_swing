@@ -1,5 +1,4 @@
 package hospital_management;
-
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -10,13 +9,11 @@ public class DoctorList extends JFrame {
     private JPanel pan = new JPanel();
     private JPanel buttonPanel = new JPanel();
     private JTable table = new JTable();
-
     DoctorList() {
        table1();
         // Wrap the table in a JScrollPane
         table.setBackground(Color.ORANGE);
         JScrollPane scrollPane = new JScrollPane(table);
-
         // Add the scroll pane to the panel
         pan.setLayout(new BorderLayout());
         pan.add(scrollPane, BorderLayout.CENTER);
@@ -43,22 +40,18 @@ public class DoctorList extends JFrame {
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
-    
-    
      public void table1() {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost/java_project", "root", "1234");
             PreparedStatement pst = con.prepareStatement("SELECT * FROM doctor");
             ResultSet rs = pst.executeQuery();
-
             DefaultTableModel model = new DefaultTableModel();
             model.addColumn("Name");
             model.addColumn("Phone");
             model.addColumn("Gender");
             model.addColumn("Address");
             model.addColumn("Specialization");
-
             while (rs.next()) {
                 Object[] rowData = new Object[5];
                 rowData[0] = rs.getString("Name");
@@ -68,7 +61,6 @@ public class DoctorList extends JFrame {
                 rowData[4] = rs.getString("specialization");
                 model.addRow(rowData);
             }
-
             table.setModel(model);
 
             rs.close();
@@ -78,7 +70,6 @@ public class DoctorList extends JFrame {
             ex.printStackTrace();
         }
     }
-
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
             new DoctorList();
