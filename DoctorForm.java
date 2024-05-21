@@ -140,8 +140,7 @@ formPanel.setBackground(Color.MAGENTA);
 //            }else {
 //               label.setText("None selected");
 //            }
-//         }  
-                
+//         }    
                 try {
                     Class.forName("com.mysql.cj.jdbc.Driver");
                 
@@ -193,15 +192,12 @@ Connection con = DriverManager.getConnection("jdbc:mysql://localhost/java_projec
             String department=result.getString(3);
             String position=result.getString(4);
            String salary=result.getString(5);
-      
             nameField.setText(fName);
              phoneno.setText(lName);
             genderComboBox.setSelectedItem(department);
              addressArea.setText(position);
              departmentComboBox.setSelectedItem(salary);
-           
                  }
-      
        }
         else {
          JOptionPane.showMessageDialog(null, "this id is not found in the database");   
@@ -213,11 +209,6 @@ Connection con = DriverManager.getConnection("jdbc:mysql://localhost/java_projec
                 }
             }
         });
-        
-        
-        
-        
-
         JPanel buttonPanel = new JPanel(new FlowLayout(FlowLayout.RIGHT));
         buttonPanel.add(saveButton);
         buttonPanel.add(updateButton);
@@ -262,12 +253,8 @@ Connection con = DriverManager.getConnection("jdbc:mysql://localhost/java_projec
             Logger.getLogger(DoctorForm.class.getName()).log(Level.SEVERE, null, ex);
         } catch (SQLException ex) {
             Logger.getLogger(DoctorForm.class.getName()).log(Level.SEVERE, null, ex);
-        }
-               
+        }     
     }
-
-   
-
     private void clearFields() {
         // Placeholder for clearing form fields logic
         nameField.setText("");
@@ -312,7 +299,6 @@ Connection con = DriverManager.getConnection("jdbc:mysql://localhost/java_projec
                 rowData[4] = rs.getString("specialization");
                 model.addRow(rowData);
             }
-
             table.setModel(model);
 
             rs.close();
