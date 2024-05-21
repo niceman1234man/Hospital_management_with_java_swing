@@ -16,8 +16,6 @@ public class Lboratoriest extends JFrame {
     private JPanel pan=new JPanel();
      private JPanel pan1=new JPanel();
      private JTable table = new JTable();
-   
-    
     private JLabel lab3=new JLabel("channel no");
     private JTextField tf2=new JTextField();
     private JLabel lab1=new JLabel("patient name");
@@ -29,9 +27,6 @@ public class Lboratoriest extends JFrame {
     private JTextArea tf3=new JTextArea();
    private  JLabel lab5=new JLabel("AGE");
     private JTextField tf4=new JTextField();
-     
-   
-    
     Lboratoriest(String a,String b){
          table1();
         JScrollPane scrollPane = new JScrollPane(table);
