@@ -3,7 +3,6 @@ package hospital_management;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-
 public class Pharmacist extends JFrame {
     private JButton viewPresc = new JButton("View Prescription");
     private JButton createItem = new JButton("Create Item");
@@ -31,8 +30,6 @@ public class Pharmacist extends JFrame {
         p.add(imageLabel);
         pan.add(viewPresc);
         pan.add(createItem);
-
-        
 //        label.setText(u);
 //        label2.setText(t);
 //        pan1.add(l);
