@@ -28,9 +28,7 @@ public class Inventory extends JFrame {
 
     private JLabel lab3 = new JLabel("Quantity  ");
     private JTextField tf3 = new JTextField();
-
     private JButton add = new JButton("ADD");
-   
     private JLabel lab4 = new JLabel("Total Cost ");
     private JTextField tf4 = new JTextField();
 
