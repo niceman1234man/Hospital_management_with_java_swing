@@ -82,8 +82,6 @@ public class Pharmacist extends JFrame {
         pan3.add(pan1);
          add(p,BorderLayout.PAGE_START);
         add(pan3,BorderLayout.CENTER);
-        
-
         setTitle("Pharmacist");
         setSize(500, 450);
         setVisible(true);
