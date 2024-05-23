@@ -61,8 +61,6 @@ public class Labratory extends JFrame {
         String aggge = tf1.getText();
         String address = tf3.getText();
           Class.forName("com.mysql.cj.jdbc.Driver");
-      
-         
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost/java_project", "root", "1234");
             String sql="update labratory set patientName='"+name+"',  type='"+aggge+"', result='"+address+"' where channelNo='"+idd+"'";
             PreparedStatement statement=con.prepareStatement(sql);
@@ -75,9 +73,6 @@ public class Labratory extends JFrame {
                 JOptionPane.showMessageDialog(null, "you didn't update any thing");}
                      } catch (ClassNotFoundException ex) {
                     java.util.logging.Logger.getLogger(DoctorForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-               
-                
-                
                      }catch (SQLException ex) {
                     Logger.getLogger(PatientRegistrationForm.class.getName()).log(Level.SEVERE, null, ex);
                 }
