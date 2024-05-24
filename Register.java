@@ -16,7 +16,6 @@ public class Register extends JFrame{
      JTextField tf3=new JTextField();
      JLabel lab5=new JLabel("AGE");
      JTextField tf4=new JTextField();
-     
     public  Register(){
      pan.add(lab);
      pan.add(tf);
@@ -43,10 +42,6 @@ public class Register extends JFrame{
         setLocationRelativeTo(null);
          setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         //setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-      
-    
-
-        
 }
 
 
