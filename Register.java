@@ -1,12 +1,8 @@
 package hospital_management;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.util.*;
-
-
-
 public class Register extends JFrame{
      JPanel pan=new JPanel();
      JLabel lab=new JLabel("PATIENT REGISTER FORM");
