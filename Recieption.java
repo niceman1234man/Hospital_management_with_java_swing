@@ -33,11 +33,9 @@ public class Recieption extends JFrame {
        apoint.setBounds(10, 135, 120, 25);
        viewInventory.setBounds(10, 165, 120, 25);
         logOut.setBounds(10, 195, 120, 25);
-       
         pan.setBackground(Color.pink);
         pan.add(patient);
         pan.add(createChanel);
-
         pan.add(viewDoctor);
         pan.add(apoint);
         pan.add(viewInventory);
@@ -64,7 +62,6 @@ viewInventory.addActionListener(new ActionListener() {
         
 apoint.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-            
              new View_appointment();   
              setVisible(false);
             }
