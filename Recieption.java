@@ -1,5 +1,4 @@
 package hospital_management;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
