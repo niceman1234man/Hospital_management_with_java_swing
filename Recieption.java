@@ -16,9 +16,7 @@ public class Recieption extends JFrame {
     private JPanel main = new JPanel();   
     Recieption(){   
         JLabel imageLabel = new JLabel();
-        
         ImageIcon imageIcon = new ImageIcon("C://Users/Hirut Tarekegn/Desktop/javaproject1/images (3).jfif");
-        
         // Set the image icon to the JLabel
         imageLabel.setIcon(imageIcon);
        
