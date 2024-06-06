@@ -46,9 +46,7 @@ patient.addActionListener(new ActionListener() {
         });
 viewInventory.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                
                new ViewInventory();
-               
                 setVisible(false);
           }
         });
