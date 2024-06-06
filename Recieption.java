@@ -19,13 +19,11 @@ public class Recieption extends JFrame {
         ImageIcon imageIcon = new ImageIcon("C://Users/Hirut Tarekegn/Desktop/javaproject1/images (3).jfif");
         // Set the image icon to the JLabel
         imageLabel.setIcon(imageIcon);
-       
         main.setLayout(new GridLayout(1,2,5,6));
       ta.add(imageLabel);
         pan.setLayout(null);
         patient.setBounds(10, 45, 120, 25);
         createChanel.setBounds(10, 75, 120, 25);
-
         viewDoctor.setBounds(10, 105, 120, 25);
        apoint.setBounds(10, 135, 120, 25);
        viewInventory.setBounds(10, 165, 120, 25);
@@ -37,10 +35,8 @@ public class Recieption extends JFrame {
         pan.add(apoint);
         pan.add(viewInventory);
         pan.add(logOut);
-        
        main.add(pan);
        main.add(ta);
-      
 patient.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
             PatientRegistrationForm rf=   new PatientRegistrationForm();
@@ -56,7 +52,6 @@ viewInventory.addActionListener(new ActionListener() {
                 setVisible(false);
           }
         });
-        
 apoint.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
              new View_appointment();   
@@ -66,7 +61,6 @@ apoint.addActionListener(new ActionListener() {
 createChanel.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                      new Create_NewChannel();
-               
                      setVisible(false);
             }
         });
