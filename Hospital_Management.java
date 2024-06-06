@@ -20,9 +20,6 @@ public class Hospital_Management extends JFrame {
     private JButton bt2 = new JButton("EXIT");
     private JButton bt3 = new JButton("login");
     private JPanel pan2 = new JPanel();
-        
-
-   
     private JPanel pan1 = new JPanel();
 
     public Hospital_Management() {
